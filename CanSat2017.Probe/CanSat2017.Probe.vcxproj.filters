@@ -477,6 +477,7 @@
     <None Include="..\Shared">
       <Filter>Header files\mbed Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Libs\BME280\BME280.h">

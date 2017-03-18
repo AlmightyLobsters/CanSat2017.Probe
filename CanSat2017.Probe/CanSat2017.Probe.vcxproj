@@ -197,6 +197,7 @@
     <None Include="CanSat2017.Probe-Debug.vgdbsettings" />
     <None Include="CanSat2017.Probe-Release.vgdbsettings" />
     <None Include="mbed.props" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Libs\BME280\BME280.h" />
