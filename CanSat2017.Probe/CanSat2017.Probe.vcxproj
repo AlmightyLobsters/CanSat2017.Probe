@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{DE19D117-6FD7-4BF2-8CCF-933D4DE6B308}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)mbed.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)mbed.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <Toolchain>c:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <Toolchain>c:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../Libs/RFM69;../Libs/BME280;../Libs/LSM6;../Libs/LIS3MDL;../Shared;../Shared/cmsis;../Shared/drivers;../Shared/events;../Shared/hal;../Shared/platform;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE/device;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libs\BME280\BME280.cpp" />
+    <ClCompile Include="..\Libs\LIS3MDL\LIS3MDL.cpp" />
+    <ClCompile Include="..\Libs\LSM6\LSM6.cpp" />
+    <ClCompile Include="..\Libs\RFM69\RFM69.cpp" />
+    <ClCompile Include="..\Shared\drivers\AnalogIn.cpp" />
+    <ClCompile Include="..\Shared\drivers\BusIn.cpp" />
+    <ClCompile Include="..\Shared\drivers\BusInOut.cpp" />
+    <ClCompile Include="..\Shared\drivers\BusOut.cpp" />
+    <ClCompile Include="..\Shared\drivers\CAN.cpp" />
+    <ClCompile Include="..\Shared\drivers\Ethernet.cpp" />
+    <ClCompile Include="..\Shared\drivers\FileBase.cpp" />
+    <ClCompile Include="..\Shared\drivers\FileLike.cpp" />
+    <ClCompile Include="..\Shared\drivers\FilePath.cpp" />
+    <ClCompile Include="..\Shared\drivers\FileSystemLike.cpp" />
+    <ClCompile Include="..\Shared\drivers\I2C.cpp" />
+    <ClCompile Include="..\Shared\drivers\I2CSlave.cpp" />
+    <ClCompile Include="..\Shared\drivers\InterruptIn.cpp" />
+    <ClCompile Include="..\Shared\drivers\InterruptManager.cpp" />
+    <ClCompile Include="..\Shared\drivers\LocalFileSystem.cpp" />
+    <ClCompile Include="..\Shared\drivers\RawSerial.cpp" />
+    <ClCompile Include="..\Shared\drivers\Serial.cpp" />
+    <ClCompile Include="..\Shared\drivers\SerialBase.cpp" />
+    <ClCompile Include="..\Shared\drivers\SPI.cpp" />
+    <ClCompile Include="..\Shared\drivers\SPISlave.cpp" />
+    <ClCompile Include="..\Shared\drivers\Stream.cpp" />
+    <ClCompile Include="..\Shared\drivers\Ticker.cpp" />
+    <ClCompile Include="..\Shared\drivers\Timeout.cpp" />
+    <ClCompile Include="..\Shared\drivers\Timer.cpp" />
+    <ClCompile Include="..\Shared\drivers\TimerEvent.cpp" />
+    <ClCompile Include="..\Shared\events\equeue\equeue.c" />
+    <ClCompile Include="..\Shared\events\equeue\equeue_mbed.cpp" />
+    <ClCompile Include="..\Shared\events\equeue\equeue_posix.c" />
+    <ClCompile Include="..\Shared\events\EventQueue.cpp" />
+    <ClCompile Include="..\Shared\hal\mbed_gpio.c" />
+    <ClCompile Include="..\Shared\hal\mbed_lp_ticker_api.c" />
+    <ClCompile Include="..\Shared\hal\mbed_pinmap_common.c" />
+    <ClCompile Include="..\Shared\hal\mbed_ticker_api.c" />
+    <ClCompile Include="..\Shared\hal\mbed_us_ticker_api.c" />
+    <ClCompile Include="..\Shared\platform\CallChain.cpp" />
+    <ClCompile Include="..\Shared\platform\mbed_alloc_wrappers.cpp" />
+    <ClCompile Include="..\Shared\platform\mbed_assert.c" />
+    <ClCompile Include="..\Shared\platform\mbed_board.c" />
+    <ClCompile Include="..\Shared\platform\mbed_critical.c" />
+    <ClCompile Include="..\Shared\platform\mbed_error.c" />
+    <ClCompile Include="..\Shared\platform\mbed_interface.c" />
+    <ClCompile Include="..\Shared\platform\mbed_mem_trace.c" />
+    <ClCompile Include="..\Shared\platform\mbed_rtc_time.cpp" />
+    <ClCompile Include="..\Shared\platform\mbed_semihost_api.c" />
+    <ClCompile Include="..\Shared\platform\mbed_wait_api_no_rtos.c" />
+    <ClCompile Include="..\Shared\platform\mbed_wait_api_rtos.cpp" />
+    <ClCompile Include="..\Shared\platform\retarget.cpp" />
+    <ClCompile Include="..\Shared\stubs.cpp" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\stm_spi_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\analogin_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\analogout_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\can_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_can.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cec.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cortex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_crc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dfsdm.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma2d.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dsi.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_eth.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ramfunc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hcd.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_irda.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_iwdg.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_lptim.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_msp_template.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nand.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nor.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pccard.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_qspi.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rng.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sd.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sdram.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_smartcard.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spdifrx.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spi.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sram.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim_ex.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_uart.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_usart.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_wwdg.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fmc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fsmc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_sdmmc.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usb.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_irq_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\i2c_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\lp_ticker.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\mbed_overrides.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\pinmap.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\port_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\pwmout_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\rtc_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\serial_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\sleep.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\spi_api.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis_nvic.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\hal_tick.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\system_stm32f4xx.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\TOOLCHAIN_GCC_ARM\startup_stm32f411xe.S" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PeripheralPins.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\us_ticker.c" />
+    <ClCompile Include="..\Shared\targets\TARGET_STM\trng_api.c" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shared" />
+    <None Include="CanSat2017.Probe-Debug.vgdbsettings" />
+    <None Include="CanSat2017.Probe-Release.vgdbsettings" />
+    <None Include="mbed.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libs\BME280\BME280.h" />
+    <ClInclude Include="..\Libs\LIS3MDL\LIS3MDL.h" />
+    <ClInclude Include="..\Libs\LSM6\LSM6.h" />
+    <ClInclude Include="..\Libs\RFM69\RFM69.h" />
+    <ClInclude Include="..\Libs\RFM69\RFM69registers.h" />
+    <ClInclude Include="..\Shared\cmsis\arm_common_tables.h" />
+    <ClInclude Include="..\Shared\cmsis\arm_const_structs.h" />
+    <ClInclude Include="..\Shared\cmsis\arm_math.h" />
+    <ClInclude Include="..\Shared\cmsis\core_ca9.h" />
+    <ClInclude Include="..\Shared\cmsis\core_caFunc.h" />
+    <ClInclude Include="..\Shared\cmsis\core_caInstr.h" />
+    <ClInclude Include="..\Shared\cmsis\core_ca_mmu.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm0.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm0plus.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm3.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm4.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm4_simd.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cm7.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cmFunc.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cmInstr.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cmSecureAccess.h" />
+    <ClInclude Include="..\Shared\cmsis\core_cmSimd.h" />
+    <ClInclude Include="..\Shared\cmsis\core_sc000.h" />
+    <ClInclude Include="..\Shared\cmsis\core_sc300.h" />
+    <ClInclude Include="..\Shared\drivers\AnalogIn.h" />
+    <ClInclude Include="..\Shared\drivers\AnalogOut.h" />
+    <ClInclude Include="..\Shared\drivers\BusIn.h" />
+    <ClInclude Include="..\Shared\drivers\BusInOut.h" />
+    <ClInclude Include="..\Shared\drivers\BusOut.h" />
+    <ClInclude Include="..\Shared\drivers\CAN.h" />
+    <ClInclude Include="..\Shared\drivers\DigitalIn.h" />
+    <ClInclude Include="..\Shared\drivers\DigitalInOut.h" />
+    <ClInclude Include="..\Shared\drivers\DigitalOut.h" />
+    <ClInclude Include="..\Shared\drivers\DirHandle.h" />
+    <ClInclude Include="..\Shared\drivers\Ethernet.h" />
+    <ClInclude Include="..\Shared\drivers\FileBase.h" />
+    <ClInclude Include="..\Shared\drivers\FileHandle.h" />
+    <ClInclude Include="..\Shared\drivers\FileLike.h" />
+    <ClInclude Include="..\Shared\drivers\FilePath.h" />
+    <ClInclude Include="..\Shared\drivers\FileSystemLike.h" />
+    <ClInclude Include="..\Shared\drivers\I2C.h" />
+    <ClInclude Include="..\Shared\drivers\I2CSlave.h" />
+    <ClInclude Include="..\Shared\drivers\InterruptIn.h" />
+    <ClInclude Include="..\Shared\drivers\InterruptManager.h" />
+    <ClInclude Include="..\Shared\drivers\LocalFileSystem.h" />
+    <ClInclude Include="..\Shared\drivers\LowPowerTicker.h" />
+    <ClInclude Include="..\Shared\drivers\LowPowerTimeout.h" />
+    <ClInclude Include="..\Shared\drivers\LowPowerTimer.h" />
+    <ClInclude Include="..\Shared\drivers\PortIn.h" />
+    <ClInclude Include="..\Shared\drivers\PortInOut.h" />
+    <ClInclude Include="..\Shared\drivers\PortOut.h" />
+    <ClInclude Include="..\Shared\drivers\PwmOut.h" />
+    <ClInclude Include="..\Shared\drivers\RawSerial.h" />
+    <ClInclude Include="..\Shared\drivers\Serial.h" />
+    <ClInclude Include="..\Shared\drivers\SerialBase.h" />
+    <ClInclude Include="..\Shared\drivers\SPI.h" />
+    <ClInclude Include="..\Shared\drivers\SPISlave.h" />
+    <ClInclude Include="..\Shared\drivers\Stream.h" />
+    <ClInclude Include="..\Shared\drivers\Ticker.h" />
+    <ClInclude Include="..\Shared\drivers\Timeout.h" />
+    <ClInclude Include="..\Shared\drivers\Timer.h" />
+    <ClInclude Include="..\Shared\drivers\TimerEvent.h" />
+    <ClInclude Include="..\Shared\events\equeue\equeue.h" />
+    <ClInclude Include="..\Shared\events\equeue\equeue_platform.h" />
+    <ClInclude Include="..\Shared\events\Event.h" />
+    <ClInclude Include="..\Shared\events\EventQueue.h" />
+    <ClInclude Include="..\Shared\events\mbed_events.h" />
+    <ClInclude Include="..\Shared\hal\analogin_api.h" />
+    <ClInclude Include="..\Shared\hal\analogout_api.h" />
+    <ClInclude Include="..\Shared\hal\buffer.h" />
+    <ClInclude Include="..\Shared\hal\can_api.h" />
+    <ClInclude Include="..\Shared\hal\can_helper.h" />
+    <ClInclude Include="..\Shared\hal\dma_api.h" />
+    <ClInclude Include="..\Shared\hal\ethernet_api.h" />
+    <ClInclude Include="..\Shared\hal\gpio_api.h" />
+    <ClInclude Include="..\Shared\hal\gpio_irq_api.h" />
+    <ClInclude Include="..\Shared\hal\hal\emac_api.h" />
+    <ClInclude Include="..\Shared\hal\i2c_api.h" />
+    <ClInclude Include="..\Shared\hal\lp_ticker_api.h" />
+    <ClInclude Include="..\Shared\hal\pinmap.h" />
+    <ClInclude Include="..\Shared\hal\port_api.h" />
+    <ClInclude Include="..\Shared\hal\pwmout_api.h" />
+    <ClInclude Include="..\Shared\hal\rtc_api.h" />
+    <ClInclude Include="..\Shared\hal\serial_api.h" />
+    <ClInclude Include="..\Shared\hal\sleep_api.h" />
+    <ClInclude Include="..\Shared\hal\spi_api.h" />
+    <ClInclude Include="..\Shared\hal\storage_abstraction\Driver_Common.h" />
+    <ClInclude Include="..\Shared\hal\storage_abstraction\Driver_Storage.h" />
+    <ClInclude Include="..\Shared\hal\ticker_api.h" />
+    <ClInclude Include="..\Shared\hal\trng_api.h" />
+    <ClInclude Include="..\Shared\hal\us_ticker_api.h" />
+    <ClInclude Include="..\Shared\mbed.h" />
+    <ClInclude Include="..\Shared\platform\Callback.h" />
+    <ClInclude Include="..\Shared\platform\CallChain.h" />
+    <ClInclude Include="..\Shared\platform\CircularBuffer.h" />
+    <ClInclude Include="..\Shared\platform\critical.h" />
+    <ClInclude Include="..\Shared\platform\CThunk.h" />
+    <ClInclude Include="..\Shared\platform\FunctionPointer.h" />
+    <ClInclude Include="..\Shared\platform\mbed_assert.h" />
+    <ClInclude Include="..\Shared\platform\mbed_debug.h" />
+    <ClInclude Include="..\Shared\platform\mbed_error.h" />
+    <ClInclude Include="..\Shared\platform\mbed_interface.h" />
+    <ClInclude Include="..\Shared\platform\mbed_mem_trace.h" />
+    <ClInclude Include="..\Shared\platform\mbed_stats.h" />
+    <ClInclude Include="..\Shared\platform\platform.h" />
+    <ClInclude Include="..\Shared\platform\PlatformMutex.h" />
+    <ClInclude Include="..\Shared\platform\rtc_time.h" />
+    <ClInclude Include="..\Shared\platform\semihost_api.h" />
+    <ClInclude Include="..\Shared\platform\SingletonPtr.h" />
+    <ClInclude Include="..\Shared\platform\toolchain.h" />
+    <ClInclude Include="..\Shared\platform\Transaction.h" />
+    <ClInclude Include="..\Shared\platform\wait_api.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\mbed_rtx.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\common_objects.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_can.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cec.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_conf_template.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cortex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_crc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_def.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dfsdm.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma2d.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dsi.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_eth.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ramfunc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hcd.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_irda.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_iwdg.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_lptim.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nand.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nor.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pccard.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_qspi.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rng.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sd.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sdram.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_smartcard.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spdifrx.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spi.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sram.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim_ex.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_uart.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_usart.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_wwdg.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fmc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fsmc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_sdmmc.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usb.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32_hal_legacy.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_object.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\PeripheralPins.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\rtc_api_hal.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis_nvic.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\hal_tick.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f411xe.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f4xx.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f4xx_hal_conf.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\system_stm32f4xx.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\objects.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PeripheralNames.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PinNames.h" />
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PortNames.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="mbed.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

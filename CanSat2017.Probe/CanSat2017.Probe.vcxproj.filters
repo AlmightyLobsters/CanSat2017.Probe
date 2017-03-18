@@ -1,0 +1,1088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{029c7cdc-ace0-4c48-addf-ad17bba4a6ee}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{068fdb9a-3a14-4dfe-8bb6-402f80ad1aad}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{15d9c921-17ff-409d-b50a-f5f34eff7ba7}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{1993dcfe-e84f-4127-a6a1-7e03571c6324}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="Source files\mbed Files">
+      <UniqueIdentifier>{1d319f43-fe8d-4dca-8229-29beabd0d03b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\mbed Files">
+      <UniqueIdentifier>{184c2a84-d3d5-448d-a352-f04beeedbe1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\Libs">
+      <UniqueIdentifier>{ce37d037-eed4-499c-bb5f-1a2dcb5876ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Libs">
+      <UniqueIdentifier>{e55a48c1-c22a-4a70-8989-0dbc62e45776}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libs\RFM69\RFM69.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\BME280\BME280.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\CAN.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\hal\mbed_us_ticker_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\hal\mbed_lp_ticker_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\SPI.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\LocalFileSystem.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_rtc_time.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\BusInOut.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Ethernet.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_board.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\I2CSlave.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\BusIn.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\events\equeue\equeue.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\FileSystemLike.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_assert.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Ticker.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\hal\mbed_ticker_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\events\equeue\equeue_mbed.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_wait_api_no_rtos.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Timeout.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\InterruptManager.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Stream.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\InterruptIn.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_alloc_wrappers.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\SPISlave.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_wait_api_rtos.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\TimerEvent.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_semihost_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Serial.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\stubs.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\hal\mbed_gpio.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\Timer.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_critical.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\FileBase.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\RawSerial.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\FilePath.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\I2C.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\CallChain.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\BusOut.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_error.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_interface.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\hal\mbed_pinmap_common.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\AnalogIn.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\events\equeue\equeue_posix.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\retarget.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\FileLike.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\drivers\SerialBase.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\events\EventQueue.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\platform\mbed_mem_trace.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pccard.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\trng_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nand.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PeripheralPins.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cortex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_qspi.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sdram.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_crc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\port_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\sleep.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_uart.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\i2c_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\mbed_overrides.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\rtc_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nor.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usb.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_msp_template.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spi.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\system_stm32f4xx.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_usart.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\stm_spi_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ramfunc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\can_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sd.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\spi_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_can.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\TOOLCHAIN_GCC_ARM\startup_stm32f411xe.S">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_irq_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_wwdg.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_smartcard.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hcd.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dfsdm.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fmc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_sdmmc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\pwmout_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cec.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_eth.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dsi.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spdifrx.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rng.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_iwdg.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\analogout_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\hal_tick.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\analogin_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\us_ticker.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\serial_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_lptim.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fsmc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_irda.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sram.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma2d.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis_nvic.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\lp_ticker.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ex.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\pinmap.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\LIS3MDL\LIS3MDL.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\LSM6\LSM6.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CanSat2017.Probe-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="CanSat2017.Probe-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="mbed.props">
+      <Filter>Source files\mbed Files</Filter>
+    </None>
+    <None Include="..\Shared">
+      <Filter>Header files\mbed Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libs\BME280\BME280.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RFM69\RFM69.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RFM69\RFM69registers.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\ticker_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\BusInOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cmSimd.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\LowPowerTicker.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\i2c_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cmInstr.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\FilePath.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\pwmout_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\events\equeue\equeue.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\port_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\PlatformMutex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\rtc_time.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_assert.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_sc000.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\gpio_irq_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\toolchain.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Timeout.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\hal\emac_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_ca9.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\dma_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\FunctionPointer.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\sleep_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\events\Event.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\trng_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\InterruptManager.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\storage_abstraction\Driver_Common.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Ticker.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Stream.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\SPISlave.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\I2CSlave.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\events\EventQueue.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\CAN.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\analogin_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm0.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm3.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm7.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Timer.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\LowPowerTimer.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\analogout_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\can_helper.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\SingletonPtr.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\FileSystemLike.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\arm_const_structs.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\rtc_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\LowPowerTimeout.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\InterruptIn.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\arm_math.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\CircularBuffer.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\events\mbed_events.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\arm_common_tables.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\CallChain.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\AnalogOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\SPI.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_sc300.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\BusOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cmSecureAccess.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\us_ticker_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\DigitalIn.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\lp_ticker_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\PortIn.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cmFunc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\events\equeue\equeue_platform.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\Callback.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm4.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_debug.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm0plus.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\ethernet_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\I2C.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\platform.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_error.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_interface.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Serial.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\FileBase.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_caFunc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_cm4_simd.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\DigitalOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\semihost_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\mbed.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\buffer.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\DirHandle.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\LocalFileSystem.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_stats.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\PortInOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\CThunk.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\TimerEvent.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\DigitalInOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\BusIn.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\wait_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\FileLike.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\can_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\Transaction.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\critical.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\PwmOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\RawSerial.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\pinmap.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\Ethernet.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\SerialBase.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\AnalogIn.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\FileHandle.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\platform\mbed_mem_trace.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\storage_abstraction\Driver_Storage.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_caInstr.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\gpio_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cmsis\core_ca_mmu.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\serial_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\drivers\PortOut.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hal\spi_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pccard.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PinNames.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nand.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cortex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fsmc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f4xx.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cryp_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_qspi.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pwr.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sdram.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_crc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f4xx_hal_conf.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ramfunc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_gpio_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_uart.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_conf_template.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dcmi_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\mbed_rtx.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_nor.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_usb.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spi.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\system_stm32f4xx.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\rtc_api_hal.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_usart.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sd.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_can.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_tim_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_wwdg.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PortNames.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_smartcard.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rcc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dac_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2s_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rtc_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hcd.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_hash_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_ltdc_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dfsdm.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_fmc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_ll_sdmmc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\PeripheralPins.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_cec.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\gpio_object.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_i2c.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dsi.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_spdifrx.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sai_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_rng.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_iwdg.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\objects.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\hal_tick.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32_hal_legacy.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_lptim.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_irda.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_pcd.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\common_objects.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\stm32f411xe.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_sram.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_dma2d.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\PeripheralNames.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_fmpi2c.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis_nvic.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_eth.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F411RE\device\cmsis.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_flash_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_def.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F4\device\stm32f4xx_hal_adc_ex.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\LIS3MDL\LIS3MDL.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\LSM6\LSM6.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="mbed.xml">
+      <Filter>VisualGDB settings</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
