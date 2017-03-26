@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../Libs/RFM69;../Libs/BME280;../Libs/LSM6;../Libs/LIS3MDL;../Shared;../Shared/cmsis;../Shared/drivers;../Shared/events;../Shared/hal;../Shared/platform;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE/device;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Libs/RFM69;../Libs/BME280;../Libs/LSM6;../Libs/LIS3MDL;../Shared;../Shared/cmsis;../Shared/drivers;../Shared/events;../Shared/hal;../Shared/platform;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE;../Shared/targets/TARGET_ARM_SSG/TARGET_BEETLE/device;../Libs;../Libs/RadioHead;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG=1;TARGET_MBED;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

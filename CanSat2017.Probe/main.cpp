@@ -1,77 +1,87 @@
 #include <mbed.h>
-#include <math.h>
-#include <BME280.h>
-#include <LSM6.h>
-#include <LIS3MDL.h>
-#include <RFM69.h>
+#include <BME280/BME280.h>
+#include <RadioHead/RH_RF69.h>
 
+// Serial
 Serial pc(USBTX, USBRX);
+//Serial gps(PA_9, PA_10);
 
-I2C sensorI2C(I2C_SDA, I2C_SCL);
+// I2C
+//I2C sensorI2C(PB_9, PB_8);
+//BME280 bme(sensorI2C);
 
-BME280 bme(sensorI2C);
-LSM6 lsm6(sensorI2C);
-LIS3MDL lis3mdl(sensorI2C);
+// SPI
 
-struct _data
+RH_RF69 radio(PA_8, PA_11);
+
+struct
 {
-	struct _prim
-	{
-		uint16_t temp; // offset 0
-		uint16_t pres; // offset 2
-		uint16_t hmdt; // offset 4
-	} primary;
-	struct _gps
-	{
-		float time; // offset 8
-		float lat; // offset 12
-		uint8_t lat_o; // true ~ S, false ~ N offset 16
-		float lon; // offset 20
-		uint8_t lon_o; // true ~ E, false ~ W offset 24
-		float alt; // offset 28
-	} gps;
-	struct _stats
-	{
-		float batlvl; // offset 32
-		float proprots; // offset 36
-	} stats;
-	struct _imu
-	{
-		int16_t acc[3]; // offset 40, 42, 44
-		int16_t gyro[3]; // offset 46, 48, 50
-		int16_t mag[3]; // offset 52, 54, 56
-	} imu;	
-} dataToSend;
+	uint8_t lat_o;
+	uint8_t lon_o;
+	uint16_t temp;
+	uint16_t pres;
+	uint16_t hmdt;
+	float time;
+	float lat;
+	float lon;
+	float alt;
+	float batlvl;
+	float velocity;
+	int16_t acc[3];
+	int16_t gyro[3];
+	int16_t mag[3];
+} data;
 
-int main() 
+float temp, press, hmdt;
+
+bool setup();
+int main()
 {
-	size_t size = sizeof(dataToSend);
+	if (!setup()) return 1;
 	for (;;)
 	{
-		lsm6.read();
-		lis3mdl.read();
-		dataToSend = { 0 };
-		dataToSend.primary.temp = bme.getTemperature() * 100;
-		dataToSend.primary.pres = bme.getPressure() * 10;
-		dataToSend.primary.hmdt = bme.getHumidity() * 100;
-		dataToSend.gps.time = 0;
-		dataToSend.gps.lat = 0;
-		dataToSend.gps.lat_o = 0;
-		dataToSend.gps.lon = 0;
-		dataToSend.gps.lon_o = 0;
-		dataToSend.gps.alt = 0;
-		dataToSend.stats.batlvl = 0;
-		dataToSend.stats.proprots = 0;
-		dataToSend.imu.acc[0] = lsm6.acc.x;
-		dataToSend.imu.acc[1] = lsm6.acc.y;
-		dataToSend.imu.acc[2] = lsm6.acc.z;
-		dataToSend.imu.gyro[0] = lsm6.gyro.x;
-		dataToSend.imu.gyro[1] = lsm6.gyro.y;
-		dataToSend.imu.gyro[2] = lsm6.gyro.z;
-		dataToSend.imu.mag[0] = lis3mdl.m.x;
-		dataToSend.imu.mag[1] = lis3mdl.m.y;
-		dataToSend.imu.mag[2] = lis3mdl.m.z;
-		
+		radio.send((uint8_t*)&data, sizeof(data));
+		radio.waitPacketSent();
+		pc.printf("Sent data\n");
 		wait_ms(500);
 	}
+}
+
+bool setup()
+{
+	if (!radio.init())
+	{
+		pc.printf("Radio not initialized");
+		return false;
+	}
+	if (!radio.setFrequency(433.0))
+	{
+		pc.printf("Frequency set failed");
+		return false;
+	}
+	radio.setTxPower(14);
+	radio.setEncryptionKey(NULL);
+
+	data = { 0 };
+	data.temp = 1;
+	data.pres = 2;
+	data.hmdt = 3;
+	data.time = 4;
+	data.lat = 5;
+	data.lat_o = 6;
+	data.lon = 7;
+	data.lon_o = 8;
+	data.alt = 9;
+	data.batlvl = 10;
+	data.velocity = 11;
+	data.acc[0] = 12;
+	data.acc[1] = 13;
+	data.acc[2] = 14;
+	data.gyro[0] = 15;
+	data.gyro[1] = 16;
+	data.gyro[2] = 17;
+	data.mag[0] = 18;
+	data.mag[1] = 19;
+	data.mag[2] = 20;
+	return true;
 }
