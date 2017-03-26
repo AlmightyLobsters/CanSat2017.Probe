@@ -463,6 +463,60 @@
     <ClCompile Include="..\Libs\LSM6\LSM6.cpp">
       <Filter>Source files\Libs</Filter>
     </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_NRF24.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_NRF51.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_NRF905.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_RF22.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_RF24.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_RF69.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_RF95.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RH_TCP.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHCRC.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHDatagram.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHGenericDriver.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHGenericSPI.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHHardwareSPI.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHMesh.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHNRFSPIDriver.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHReliableDatagram.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHRouter.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libs\RadioHead\RHSPIDriver.cpp">
+      <Filter>Source files\Libs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="CanSat2017.Probe-Debug.vgdbsettings">
@@ -1078,6 +1132,69 @@
       <Filter>Header files\Libs</Filter>
     </ClInclude>
     <ClInclude Include="..\Libs\LSM6\LSM6.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\radio_config_Si4460.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RadioHead.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_NRF24.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_NRF51.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_NRF905.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_RF22.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_RF24.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_RF69.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_RF95.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RH_TCP.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHCRC.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHDatagram.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHGenericDriver.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHGenericSPI.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHHardwareSPI.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHMesh.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHNRFSPIDriver.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHReliableDatagram.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHRouter.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHSPIDriver.h">
+      <Filter>Header files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\RadioHead\RHTcpProtocol.h">
       <Filter>Header files\Libs</Filter>
     </ClInclude>
   </ItemGroup>
