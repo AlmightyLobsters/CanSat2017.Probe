@@ -80,7 +80,6 @@
     <ClCompile Include="..\Libs\RadioHead\RH_RF69.cpp" />
     <ClCompile Include="..\Libs\RadioHead\RH_RF95.cpp" />
     <ClCompile Include="..\Libs\RadioHead\RH_TCP.cpp" />
-    <ClCompile Include="..\Libs\RFM69\RFM69.cpp" />
     <ClCompile Include="..\Shared\drivers\AnalogIn.cpp" />
     <ClCompile Include="..\Shared\drivers\BusIn.cpp" />
     <ClCompile Include="..\Shared\drivers\BusInOut.cpp" />
@@ -254,8 +253,6 @@
     <ClInclude Include="..\Libs\RadioHead\RH_RF69.h" />
     <ClInclude Include="..\Libs\RadioHead\RH_RF95.h" />
     <ClInclude Include="..\Libs\RadioHead\RH_TCP.h" />
-    <ClInclude Include="..\Libs\RFM69\RFM69.h" />
-    <ClInclude Include="..\Libs\RFM69\RFM69registers.h" />
     <ClInclude Include="..\Shared\cmsis\arm_common_tables.h" />
     <ClInclude Include="..\Shared\cmsis\arm_const_structs.h" />
     <ClInclude Include="..\Shared\cmsis\arm_math.h" />

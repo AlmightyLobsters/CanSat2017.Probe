@@ -31,9 +31,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Libs\RFM69\RFM69.cpp">
-      <Filter>Source files\Libs</Filter>
-    </ClCompile>
     <ClCompile Include="..\Libs\BME280\BME280.cpp">
       <Filter>Source files\Libs</Filter>
     </ClCompile>
@@ -535,12 +532,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Libs\BME280\BME280.h">
-      <Filter>Header files\Libs</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Libs\RFM69\RFM69.h">
-      <Filter>Header files\Libs</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Libs\RFM69\RFM69registers.h">
       <Filter>Header files\Libs</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\hal\ticker_api.h">
