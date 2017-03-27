@@ -29,6 +29,12 @@
     <Filter Include="Header files\Libs">
       <UniqueIdentifier>{e55a48c1-c22a-4a70-8989-0dbc62e45776}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source files\mbed Files\fat">
+      <UniqueIdentifier>{448e425e-ab4a-4f8b-8e6f-614b27cb7c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\mbed Files\fat">
+      <UniqueIdentifier>{c1836e33-5af5-4789-94e6-5b5c21f5ef9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Libs\BME280\BME280.cpp">
@@ -433,6 +439,27 @@
     <ClCompile Include="..\Shared\targets\TARGET_STM\TARGET_STM32F1\us_ticker.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\ChaN\ccsbcs.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\ChaN\diskio.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\FATFileHandle.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\sd\SDFileSystem.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\FATDirHandle.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\ChaN\ff.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\features\unsupported\fs\fat\FATFileSystem.cpp">
+      <Filter>Source files\mbed Files\fat</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="CanSat2017.Probe-Debug.vgdbsettings">
@@ -441,12 +468,11 @@
     <None Include="CanSat2017.Probe-Release.vgdbsettings">
       <Filter>VisualGDB settings</Filter>
     </None>
-    <None Include="README.md" />
-    <None Include="mbed.props">
-      <Filter>Source files\mbed Files</Filter>
-    </None>
     <None Include="..\Shared">
       <Filter>Header files\mbed Files</Filter>
+    </None>
+    <None Include="mbed.props">
+      <Filter>Source files\mbed Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1028,6 +1054,33 @@
     </ClInclude>
     <ClInclude Include="..\Shared\targets\TARGET_STM\TARGET_STM32F1\device\stm32f1xx_hal_smartcard.h">
       <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\sd\SDFileSystem.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\MemFileSystem.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\FATFileHandle.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\FATFileSystem.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\ChaN\ff.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\FATDirHandle.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\ChaN\diskio.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\ChaN\ffconf.h">
+      <Filter>Header files\mbed Files\fat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\features\unsupported\fs\fat\ChaN\integer.h">
+      <Filter>Header files\mbed Files\fat</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
