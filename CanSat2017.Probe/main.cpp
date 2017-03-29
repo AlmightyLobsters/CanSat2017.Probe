@@ -1,6 +1,7 @@
 #include <mbed.h>
 #include <BME280/BME280.h>
 #include <LIS3MDL/LIS3MDL.h>
+#include <LSM6DS33/LSM6DS33.h>
 #include <RadioHead/RH_RF69.h>
 
 // Serial
@@ -11,6 +12,7 @@ Serial gps(PA_9, PA_10);
 I2C sensorI2C(PB_9, PB_8);
 BME280 bme(sensorI2C);
 LIS3MDL lis(sensorI2C);
+LSM6DS33 lsm(sensorI2C);
 
 // SPI
 
@@ -118,6 +120,7 @@ int main()
 		data.temp = bme.getTemperature() * 100;
 		data.pres = bme.getPressure() * 10;
 		data.hmdt = bme.getHumidity() * 100;
+		lsm.read(data.acc, data.gyro);
 		lis.read(data.mag);
 
 		radio.send((uint8_t*)&data, sizeof(data));
@@ -150,6 +153,12 @@ bool setup()
 	if (!lis.init())
 	{
 		pc.printf("LIS3MDL not initialized");
+		return false;
+	}
+
+	if (!lsm.init())
+	{
+		pc.printf("LSM6DS33 not initialized");
 		return false;
 	}
 #pragma endregion
