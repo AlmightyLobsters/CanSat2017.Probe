@@ -61,7 +61,7 @@
   <ItemGroup>
     <ClCompile Include="..\Libs\BME280\BME280.cpp" />
     <ClCompile Include="..\Libs\LIS3MDL\LIS3MDL.cpp" />
-    <ClCompile Include="..\Libs\LSM6\LSM6.cpp" />
+    <ClCompile Include="..\Libs\LSM6DS33\LSM6DS33.cpp" />
     <ClCompile Include="..\Libs\RadioHead\RHCRC.cpp" />
     <ClCompile Include="..\Libs\RadioHead\RHDatagram.cpp" />
     <ClCompile Include="..\Libs\RadioHead\RHGenericDriver.cpp" />
@@ -210,7 +210,7 @@
   <ItemGroup>
     <ClInclude Include="..\Libs\BME280\BME280.h" />
     <ClInclude Include="..\Libs\LIS3MDL\LIS3MDL.h" />
-    <ClInclude Include="..\Libs\LSM6\LSM6.h" />
+    <ClInclude Include="..\Libs\LSM6DS33\LSM6DS33.h" />
     <ClInclude Include="..\Libs\RadioHead\RadioHead.h" />
     <ClInclude Include="..\Libs\RadioHead\radio_config_Si4460.h" />
     <ClInclude Include="..\Libs\RadioHead\RHCRC.h" />
