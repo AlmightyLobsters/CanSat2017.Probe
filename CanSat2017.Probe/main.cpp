@@ -7,8 +7,8 @@ Serial pc(USBTX, USBRX);
 Serial gps(PA_9, PA_10);
 
 // I2C
-//I2C sensorI2C(PB_9, PB_8);
-//BME280 bme(sensorI2C);
+I2C sensorI2C(PB_9, PB_8);
+BME280 bme(sensorI2C);
 
 // SPI
 
@@ -18,7 +18,7 @@ struct
 {
 	uint8_t lat_o;
 	uint8_t lon_o;
-	uint16_t temp;
+	int16_t temp;
 	uint16_t pres;
 	uint16_t hmdt;
 	float time;
@@ -113,6 +113,10 @@ int main()
 			memset(gpsMsg, 0, 100);
 		}
 
+		data.temp = bme.getTemperature() * 100;
+		data.pres = bme.getPressure() * 10;
+		data.hmdt = bme.getHumidity() * 100;
+
 		radio.send((uint8_t*)&data, sizeof(data));
 		radio.waitPacketSent();
 		pc.printf("Sent data\n");
@@ -138,7 +142,7 @@ bool setup()
 #pragma endregion
 
 #pragma region I2C
-
+	bme.initialize();
 #pragma endregion
 
 #pragma region SPI
