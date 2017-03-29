@@ -37,22 +37,20 @@ BME280::BME280(PinName sda, PinName scl, char slave_adr)
     address(slave_adr),
     t_fine(0)
 {
-    initialize();
 }
 
 BME280::BME280(I2C &i2c_obj, char slave_adr)
     :
-    i2c_p(NULL),
+    i2c_p(nullptr),
     i2c(i2c_obj),
     address(slave_adr),
     t_fine(0)
 {
-    initialize();
 }
 
 BME280::~BME280()
 {
-    if (NULL != i2c_p)
+    if (i2c_p != nullptr)
         delete  i2c_p;
 }
 
