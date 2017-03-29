@@ -1,5 +1,6 @@
 #include <mbed.h>
 #include <BME280/BME280.h>
+#include <LIS3MDL/LIS3MDL.h>
 #include <RadioHead/RH_RF69.h>
 
 // Serial
@@ -9,6 +10,7 @@ Serial gps(PA_9, PA_10);
 // I2C
 I2C sensorI2C(PB_9, PB_8);
 BME280 bme(sensorI2C);
+LIS3MDL lis(sensorI2C);
 
 // SPI
 
@@ -42,7 +44,7 @@ int main()
 	if (!setup()) return 1;
 	for (;;)
 	{
-		data.lat = data.lat_o = data.lon = data.lat_o = 0;
+		memset(&data, 0, sizeof(data));
 		if (waitSerialWithTimeout(&gps, 700))
 		{
 			gps.gets(gpsMsg, 79);
@@ -116,6 +118,7 @@ int main()
 		data.temp = bme.getTemperature() * 100;
 		data.pres = bme.getPressure() * 10;
 		data.hmdt = bme.getHumidity() * 100;
+		lis.read(data.mag);
 
 		radio.send((uint8_t*)&data, sizeof(data));
 		radio.waitPacketSent();
@@ -143,6 +146,12 @@ bool setup()
 
 #pragma region I2C
 	bme.initialize();
+
+	if (!lis.init())
+	{
+		pc.printf("LIS3MDL not initialized");
+		return false;
+	}
 #pragma endregion
 
 #pragma region SPI
