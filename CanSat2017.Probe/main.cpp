@@ -4,7 +4,7 @@
 
 // Serial
 Serial pc(USBTX, USBRX);
-//Serial gps(PA_9, PA_10);
+Serial gps(PA_9, PA_10);
 
 // I2C
 //I2C sensorI2C(PB_9, PB_8);
@@ -32,23 +32,97 @@ struct
 	int16_t mag[3];
 } data;
 
-float temp, press, hmdt;
+char gpsMsg[80];
 
 bool setup();
+bool waitSerialWithTimeout(Serial*, uint16_t);
+bool checkSum(char*, uint16_t, uint8_t*);
 int main()
 {
 	if (!setup()) return 1;
 	for (;;)
 	{
+		data.lat = data.lat_o = data.lon = data.lat_o = 0;
+		if (waitSerialWithTimeout(&gps, 700))
+		{
+			gps.gets(gpsMsg, 79);
+			uint8_t padding;
+			if (checkSum(gpsMsg, 79, &padding) && strncmp(&gpsMsg[padding], "GPGGA", 5) == 0)
+			{
+				char buffer[15]; // Max length of a GGA datafield should be 11, so this is fine
+				memset(buffer, 0, sizeof(buffer));
+				for (uint8_t i = 0; i < sizeof(buffer); i++) buffer[i] = 0;
+				uint8_t startIndex = 0, endIndex;
+				while (gpsMsg[startIndex] != ',') startIndex++; // Go after $GPGGA
+				endIndex = ++startIndex; // Move endIndex after startIndex
+				while (gpsMsg[endIndex] != ',') endIndex++; // Move endIndex to next comma
+				if (endIndex != startIndex) // If there are characters between the commas, interpret time
+				{
+					memcpy(buffer, &gpsMsg[startIndex], endIndex - startIndex); // Copy characters from 1 char after comma to 1 char before comma
+					data.time = strtof(buffer, nullptr);
+					memset(buffer, 0, sizeof(buffer)); // Clear buffer
+				}
+				startIndex = ++endIndex; // Set startIndex to next comma, increment endIndex
+				while (gpsMsg[endIndex] != ',') endIndex++; // Move endIndex to next comma
+				if (endIndex != startIndex) // If there are characters between commas, interpret latitude
+				{
+					memcpy(buffer, &gpsMsg[startIndex + 1], endIndex - startIndex); // Copy characters between commas
+					data.lat = strtof(buffer, nullptr);
+					memset(buffer, 0, sizeof(buffer)); // Clear buffer
+				}
+				startIndex = ++endIndex; // Set startIndex to next comma, increment endIndex
+				while (gpsMsg[endIndex] != ',') endIndex++; // Move endIndex to next comma
+				if (endIndex != startIndex)
+				{
+					memcpy(buffer, &gpsMsg[startIndex], endIndex - startIndex); // Copy characters between commas
+					data.lat_o = buffer[0] == 'S';
+					memset(buffer, 0, sizeof(buffer)); // Clear buffer
+				}
+				startIndex = ++endIndex;
+				while (gpsMsg[endIndex] != ',') endIndex++; // Move endIndex to next comma
+				if (endIndex != startIndex)
+				{
+					memcpy(buffer, &gpsMsg[startIndex], endIndex - startIndex);
+					data.lon = strtof(buffer, nullptr);
+					memset(buffer, 0, sizeof(buffer));
+				}
+				startIndex = ++endIndex;
+				while (gpsMsg[endIndex] != ',') endIndex++;
+				if (endIndex != startIndex)
+				{
+					memcpy(buffer, &gpsMsg[startIndex], endIndex - startIndex);
+					data.lon_o = buffer[0] == 'E';
+					memset(buffer, 0, sizeof(buffer));
+				}
+				startIndex = ++endIndex;
+				for (uint8_t i = 0; i < 3; i++) // Skip 3 fields
+				{
+					while (gpsMsg[startIndex] != ',')
+						startIndex++;
+					startIndex++;
+				}
+				endIndex = startIndex;
+				while (gpsMsg[endIndex] != ',') endIndex++;
+				if (endIndex != startIndex)
+				{
+					memcpy(buffer, &gpsMsg[startIndex], endIndex - startIndex);
+					data.alt = strtof(buffer, nullptr);
+					memset(buffer, 0, sizeof(buffer));
+				}
+			}
+			memset(gpsMsg, 0, 100);
+		}
+
 		radio.send((uint8_t*)&data, sizeof(data));
 		radio.waitPacketSent();
 		pc.printf("Sent data\n");
-		wait_ms(500);
 	}
 }
 
 bool setup()
 {
+	Timer t;
+#pragma region Radio
 	if (!radio.init())
 	{
 		pc.printf("Radio not initialized");
@@ -61,27 +135,61 @@ bool setup()
 	}
 	radio.setTxPower(14);
 	radio.setEncryptionKey(NULL);
+#pragma endregion
 
-	data = { 0 };
-	data.temp = 1;
-	data.pres = 2;
-	data.hmdt = 3;
-	data.time = 4;
-	data.lat = 5;
-	data.lat_o = 6;
-	data.lon = 7;
-	data.lon_o = 8;
-	data.alt = 9;
-	data.batlvl = 10;
-	data.velocity = 11;
-	data.acc[0] = 12;
-	data.acc[1] = 13;
-	data.acc[2] = 14;
-	data.gyro[0] = 15;
-	data.gyro[1] = 16;
-	data.gyro[2] = 17;
-	data.mag[0] = 18;
-	data.mag[1] = 19;
-	data.mag[2] = 20;
+#pragma region I2C
+
+#pragma endregion
+
+#pragma region SPI
+
+#pragma endregion
+
+#pragma region GPS
+	// Baudrate 115200
+	gps.printf("$PMTK251,115200*1F\r\n");
+	if (!waitSerialWithTimeout(&gps, 1000))
+	{
+		pc.printf("GPS baudrate set failed");
+		return false;
+	}
+	gps.baud(115200);
+
+	// Fix interval 500ms
+	gps.printf("$PMTK300,500,0,0,0,0*28\r\n");
+	// Enable GGA protocol
+	gps.printf("$PMTK314,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29\r\n");
+#pragma endregion
+
 	return true;
+}
+
+bool waitSerialWithTimeout(Serial* serial, uint16_t timeout)
+{
+	Timer t;
+	t.start();
+	while (!serial->readable() && t.read_ms() < timeout)
+		;
+	t.stop();
+	return t.read_ms() < timeout;
+}
+
+bool checkSum(char* msg, uint16_t length, uint8_t* padding)
+{
+	uint16_t realLength = strnlen(msg, length);
+	if (!(realLength > 6 &&
+		msg[0] == '$' &&
+		msg[realLength - 1] == '\n' &&
+		msg[realLength - 2] == '\r' &&
+		msg[realLength - 5] == '*'))
+		return false;
+	*padding = 1;
+	while (msg[*padding] == '$') (*padding)++;
+	char expChecksum[2] = { msg[realLength - 4], msg[realLength - 3] };
+	char checksum[2] = { 0, 0 };
+	uint8_t interChecksum = 0;
+	for (uint16_t i = *padding; i < realLength - 5; i++)
+		interChecksum ^= msg[i];
+	sprintf(checksum, "%02X", interChecksum);
+	return strncmp(checksum, expChecksum, 2) == 0;
 }
